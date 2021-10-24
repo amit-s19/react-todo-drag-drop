@@ -1,0 +1,43 @@
+#sidebar {
+    background: #fff;
+    padding: 20px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border-right: 3px solid #ededed;
+}
+
+
+.sidebar__title > div > h1 {
+    font-size: 18px;
+    display: inline;
+    padding-left: 10px;
+}
+
+
+.sidebar__link {
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#activeTab {
+    color: #000;
+    font-weight: 500;
+}
+
+.sidebar__link >  a {
+    text-decoration: none;
+    color: #a5aaad;
+}
+
+.tabIcon {
+    padding-right: 20px;
+}
+
+#lastElements {
+    margin-top: 100%;
+}
+
+#topElements {
+    padding-top: 50px;
+}

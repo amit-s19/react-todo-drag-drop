@@ -1,0 +1,25 @@
+a {
+    color: red;
+}
+
+#submitButton {
+    color: white;
+    background-color: #329C89;
+    border-color: transparent;
+}
+
+#forgotPassword {
+    color:#329C89;
+    padding-top: 5em;
+}
+
+#resetPassword {
+    color:#329C89;
+    padding-top: 1em;
+}
+
+#cardBody {
+    padding: 50px 50px 70px 50px;
+    border-radius: 50px;
+    min-height: 35em;
+}
