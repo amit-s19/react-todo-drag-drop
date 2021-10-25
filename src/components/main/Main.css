@@ -88,3 +88,121 @@ textarea:focus, input:focus{
 Button {
     width: 45%;
 }
+
+.edit-todo {
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    height: 78%;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+}
+
+.edit-todo-title {
+    padding: 20px 0px 30px 30px;
+}
+
+.edit-todo-title > p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.edit-todo-desc {
+    padding: 20px 0px 30px 30px;
+}
+
+.edit-todo-desc > div >  p  {
+    color: #6B6B6B;
+}
+
+.edit-todo-desc > div > div > p  {
+    color: #000;
+}
+
+.edit-todo-desc > div > div > p > img {
+    height: 30px;
+}
+
+.description {
+    padding-top: 20px;
+    display: flex;
+}
+
+.description > div {
+    padding: 0px 20px 0px 40px;
+}
+
+.description > div > p {
+    font-size: 14px;
+}
+
+.todoP {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+#editTitle:not(:focus) {
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    padding: 5px;
+}
+
+#editTitle:focus {
+    font-size: 18px;
+    font-weight: 500;
+    border-color:rgba(0, 0, 0, 0.2) ;
+    border-width: 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#editDesc:not(:focus) {
+    font-size: 14px;
+    border: none;
+    padding: 5px;
+    height: 200px;
+    width: 300px;
+}
+
+#editDesc:focus {
+    font-size: 14px;
+    border-color:rgba(0, 0, 0, 0.2) ;
+    border-width: 1px;
+    padding: 5px;
+    height: auto;
+    border-radius: 5px;
+    height: 200px;
+    width: 300px;
+}
+
+#editButtons {
+    padding-top: 15%;
+    padding-left: 40px;
+    
+}
+
+@keyframes inAnimation {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  

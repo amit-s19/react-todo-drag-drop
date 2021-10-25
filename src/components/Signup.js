@@ -7,6 +7,21 @@ import './Form.css';
 import axios from "axios";
 import firebase from "firebase/app"
 import { auth } from "../firebase"
+import Modal from 'react-modal';
+import loader from '../assets/loader.gif';
+
+const loaderStyle = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'transparent',
+    border: 'none'
+  },
+};
 
 export default function Signup() {
   const nameRef = useRef()
@@ -60,6 +75,14 @@ export default function Signup() {
   return (
     <>
       <div className="row">
+        <Modal
+          isOpen={loading}
+          style={loaderStyle}
+        >
+          <div>
+            <img src={loader} />
+          </div>
+        </Modal>
         <div className="col-md-7" style={{ justifyContent: 'center', alignItems: 'center', paddingTop: 70 }}>
           <Image src={Group} />
         </div>
@@ -107,6 +130,8 @@ export default function Signup() {
                   <Form.Check ref={checkboxRef} type="checkbox" label="Remember Me" style={{ color: '#1A3B58', fontSize: 12, paddingTop: 30 }} />
                 </Form.Group>
               </Form>
+              <p className="w-100 text-center mt-3" style={{fontSize: 10, color: 'rgba(0,0,0,0.7)'}}>Note: It may take some time for the intial requests as the server is idle when not receiving requests.</p>
+
             </Card.Body>
           </Card>
 

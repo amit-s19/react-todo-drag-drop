@@ -7,6 +7,22 @@ import Group from '../assets/Group.png';
 import './Form.css';
 import firebase from "firebase/app"
 import axios from "axios"
+import Modal from 'react-modal';
+import loader from '../assets/loader.gif';
+
+const loaderStyle = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'transparent',
+    border: 'none'
+  },
+};
+
 export default function Login() {
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -50,6 +66,14 @@ export default function Login() {
   return (
     <>
       <div className="row">
+        <Modal
+          isOpen={loading}
+          style={loaderStyle}
+        >
+          <div>
+            <img src={loader} />
+          </div>
+        </Modal>
         <div className="col-md-7" style={{ justifyContent: 'center', alignItems: 'center', paddingTop: 70 }}>
           <Image src={Group} />
         </div>
@@ -89,6 +113,7 @@ export default function Login() {
               <div className="w-100 text-center mt-3">
                 <Link to="/forgot-password"><p id="forgotPassword">Forgot Password?</p></Link>
               </div>
+              <p className="w-100 text-center mt-3" style={{fontSize: 10, color: 'rgba(0,0,0,0.7)'}}>Note: It may take some time for the intial requests as the server is idle when not receiving requests.</p>
             </Card.Body>
           </Card>
         </div>
