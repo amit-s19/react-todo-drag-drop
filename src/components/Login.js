@@ -113,7 +113,7 @@ export default function Login() {
               <div className="w-100 text-center mt-3">
                 <Link to="/forgot-password"><p id="forgotPassword">Forgot Password?</p></Link>
               </div>
-              <p className="w-100 text-center mt-3" style={{fontSize: 10, color: 'rgba(0,0,0,0.7)'}}>Note: It may take some time for the intial requests as the server is idle when not receiving requests.</p>
+              <p className="w-100 text-center mt-3" style={{fontSize: 10, color: 'rgba(0,0,0,0.7)'}}>Note: It may take some time for the initial requests as the server is idle when not receiving requests.</p>
             </Card.Body>
           </Card>
         </div>

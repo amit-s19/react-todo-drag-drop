@@ -168,8 +168,10 @@ function Main() {
     const addItem = async (type) => {
         try {
             setLoading(true);
-            if (text.length === 0 || desc.length === 0)
+            if (text.trim().length === 0 || desc.trim().length === 0) {
+                setLoading(false);
                 return
+            }
             if (type === "todo") {
                 const todo = {
                     id: v4(),
@@ -510,7 +512,7 @@ function Main() {
                                 color: "#329C89",
                                 fontSize: 16,
                                 fontWeight: 700
-                            }} onClick={() => { if (!editingTodo) setShowTodoAdd(true) }}>+</Button>
+                            }} onClick={() => { if (!editingTodo) setShowInprogressAdd(true) }}>+</Button>
 
                     }
                     <Droppable droppableId={"in-progress"}>
@@ -590,7 +592,7 @@ function Main() {
                                 color: "#329C89",
                                 fontSize: 16,
                                 fontWeight: 700
-                            }} onClick={() => { if (!editingTodo) setShowTodoAdd(true) }}>+</Button>
+                            }} onClick={() => { if (!editingTodo) setShowDoneAdd(true) }}>+</Button>
 
                     }
                     <Droppable droppableId={"done"}>

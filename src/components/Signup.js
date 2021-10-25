@@ -130,7 +130,7 @@ export default function Signup() {
                   <Form.Check ref={checkboxRef} type="checkbox" label="Remember Me" style={{ color: '#1A3B58', fontSize: 12, paddingTop: 30 }} />
                 </Form.Group>
               </Form>
-              <p className="w-100 text-center mt-3" style={{fontSize: 10, color: 'rgba(0,0,0,0.7)'}}>Note: It may take some time for the intial requests as the server is idle when not receiving requests.</p>
+              <p className="w-100 text-center mt-3" style={{fontSize: 10, color: 'rgba(0,0,0,0.7)'}}>Note: It may take some time for the initial requests as the server is idle when not receiving requests.</p>
 
             </Card.Body>
           </Card>
